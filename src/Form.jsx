@@ -9,7 +9,7 @@ export default function Form() {
 
   const isEmptyMessage = "入力してください。";
   const patternZeroToOneHundred = /^[1-9]$|^[1-9][0-9]$/;
-  const isNotZeroToOneHundred = "1から9の整数を半角数字で入力してください。";
+  const isNotZeroToOneHundred = "1から99の整数を半角数字で入力してください。";
 
   return (
     <div>
