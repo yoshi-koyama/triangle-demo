@@ -1,103 +1,127 @@
+@smartphone-s: (max-width: 400px);
+@smartphone-m: (min-width: 401px) and (max-width: 767px);
+@smartphone-l: (min-width: 768px) and (max-width: 991px);
+@smartphone-s-m: (max-width: 767px);
+@smartphone-s-m-l: (max-width: 991px);
+@tablet: (min-width: 992px) and (max-width: 1199px);
+@desktop: (min-width: 1200px);
+@tablet-desktop: (min-width: 992px);
+
+@col-md-4: calc(100%/3);
+@col-md-6: calc(100%/2);
+
+@color-lightgray: #eee;
+@color-lightergray: #f7f7f7;
+@color-gray-label: #7f878c;
+@color-gray-focused: #fafafa;
+@color-darkblue: #0f1b21;
+@color-base: #260e0a;
+@color-red-mandatory: #f64e4e;
+@color-red-error: #b70000;
+@color-black-submit-btn: #1f3744;
+
+@cubic-bezier-ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+
 html {
   font-size: 12px;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden
 }
+
 h4 {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.8;
   margin: 0;
-}
-@media (max-width: 767px) {
-  h4 {
+
+  @media @smartphone-s-m {
     font-size: 18px;
   }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  h4 {
+
+  @media @smartphone-l {
     font-size: 20px;
   }
 }
+
 .container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (max-width: 400px) {
-  .container {
+
+  @media @smartphone-s {
     width: 100%;
   }
-}
-@media (min-width: 401px) and (max-width: 767px) {
-  .container {
+
+  @media @smartphone-m {
     width: 100%;
   }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .container {
+
+  @media @smartphone-l {
     width: 750px;
   }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container {
+
+  @media @tablet {
     width: 970px;
   }
-}
-@media (min-width: 1200px) {
-  .container {
+
+  @media @desktop {
     width: 1170px;
   }
 }
+
 .panel-primary {
-  border: 1px solid #eee;
-  border-top: 3px solid #0f1b21;
-  color: #260e0a;
+  border: 1px solid @color-lightgray;
+  border-top: 3px solid @color-darkblue;
+  color: @color-base;
 }
+
 .panel-primary__heading {
   padding: 15px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid @color-lightgray;
 }
+
 .form-group {
   display: flex;
   align-items: baseline;
   padding: 20px 20px;
   margin-bottom: 0;
-  border-bottom: 1px solid #f7f7f7;
-}
-@media (max-width: 991px) {
-  .form-group {
+  border-bottom: 1px solid @color-lightergray;
+
+  @media @smartphone-s-m-l {
     flex-direction: column;
     padding: 10px 20px;
     border-bottom: none;
   }
+
 }
-@media (min-width: 1200px) {
-  .col-md-4 {
-    width: calc(100%/3);
+
+.col-md-4 {
+  @media @desktop {
+    width: @col-md-4;  
   }
 }
+
 .control-label {
-  color: #7f878c;
+  color: @color-gray-label;
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
   text-align: right;
-}
-@media (max-width: 991px) {
-  .control-label {
+
+  @media @smartphone-s-m-l {
     text-align: left;
   }
-}
-@media (min-width: 992px) {
-  .control-label {
+
+  @media @tablet-desktop {
     margin-right: 12px;
   }
 }
+
 .notice {
-  color: #f64e4e;
+  color: @color-red-mandatory;
 }
+
 input[type="text"] {
   display: block;
   width: 100%;
@@ -107,20 +131,22 @@ input[type="text"] {
   line-height: 1.42857;
   border: 1px solid #ddd;
   border-radius: 3px;
-  transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 400ms @cubic-bezier-ease-out;
   box-sizing: border-box;
 }
+
 input[type="text"]:focus,
 input[type="text"]:hover,
 input[type="text"]:active {
-  outline: none;
+  outline: none
 }
+
 input[type="submit"] {
   display: inline-block;
   margin-bottom: 0;
   padding: 15px 35px;
   color: #fff;
-  background-color: #1f3744;
+  background-color: @color-black-submit-btn;
   font-size: 16px;
   font-weight: normal;
   text-align: center;
@@ -132,18 +158,21 @@ input[type="submit"] {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none
 }
+
 input:focus[type="text"] {
-  background: #fafafa;
+  background: @color-gray-focused;
 }
+
 .panel-footer {
   padding: 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid @color-lightgray;
   text-align: center;
 }
+
 .error {
   font-size: 93%;
-  color: #b70000;
+  color: @color-red-error;
   display: block;
 }
