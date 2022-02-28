@@ -1,6 +1,7 @@
 {
   "name": "triangle-demo",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@hookform/error-message": "0.0.4",
