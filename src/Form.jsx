@@ -5,7 +5,19 @@ import { ErrorMessage } from '@hookform/error-message';
 
 export default function Form() {
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => alert(`Submitted Value: ${JSON.stringify(data, null, 4)}`);
+  const showKindOfTriangle = (length_a, length_b, length_c) => {
+    if (length_a + length_b < length_c || length_b + length_c < length_a || length_c + length_a < length_b) {
+      return "三角形は作れません";
+    }
+    if (length_a === length_b && length_b === length_c) {
+      return "正三角形";
+    } else if (length_a === length_b || length_b === length_c || length_c === length_a) {
+      return "二等辺三角形";
+    } else {
+      return "不等辺三角形";
+    }
+  }
+  const onSubmit = data => alert(showKindOfTriangle(Number(data.length_a), Number(data.length_b), Number(data.length_c)));
 
   const isEmptyMessage = "入力してください。";
   const patternZeroToOneHundred = /^[1-9]$|^[1-9][0-9]$/;
@@ -87,7 +99,7 @@ export default function Form() {
                 </div>
               </div>
               <div className="panel-footer">
-                <input type="submit" name="submitConfirm" value="送信内容を確認する" />
+                <input type="submit" name="submitConfirm" value="計算する" />
               </div>
             </form>
           </div>
