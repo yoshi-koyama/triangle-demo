@@ -1299,10 +1299,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hookform/error-message@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@hookform/error-message/-/error-message-0.0.4.tgz"
-  integrity sha512-as5acnxkWuF5XrzHhZlzdXUk4zpHNzFLe+uGyaJtSrMbDVTvcNL62ESRK5DTVGPix8shJnt6G2LfrobHBPpvYg==
+"@hookform/error-message@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/@hookform/error-message/-/error-message-0.0.5.tgz"
+  integrity sha512-es7eLLFA3SXNYAT8aUjvf7Gok1eMHK+9DMILtJA7ZEwYZlCCCPifhpoZmY+5SOopEtF7e+qxFOjX+MJnI3jOcg==
 
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
