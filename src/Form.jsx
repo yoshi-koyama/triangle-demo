@@ -6,9 +6,6 @@ import { ErrorMessage } from '@hookform/error-message';
 export default function Form() {
   const { register, handleSubmit, errors } = useForm();
   const showKindOfTriangle = (length_a, length_b, length_c) => {
-    if (length_a + length_b < length_c || length_b + length_c < length_a || length_c + length_a < length_b) {
-      return "三角形は作れません";
-    }
     if (length_a === length_b && length_b === length_c) {
       return "正三角形";
     } else if (length_a === length_b || length_b === length_c || length_c === length_a) {
