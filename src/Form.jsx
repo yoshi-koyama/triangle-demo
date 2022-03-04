@@ -4,11 +4,11 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from '@hookform/error-message';
 
 export default function Form() {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, formState } = useForm({
+    mode: 'onChange',
+    reValidateMode: 'onChange'
+  });
   const showKindOfTriangle = (length_a, length_b, length_c) => {
-    if (length_a + length_b < length_c || length_b + length_c < length_a || length_c + length_a < length_b) {
-      return "三角形は作れません";
-    }
     if (length_a === length_b && length_b === length_c) {
       return "正三角形";
     } else if (length_a === length_b || length_b === length_c || length_c === length_a) {
@@ -22,6 +22,7 @@ export default function Form() {
   const isEmptyMessage = "入力してください。";
   const patternZeroToOneHundred = /^[1-9]$|^[1-9][0-9]$/;
   const isNotZeroToOneHundred = "1から99の整数を半角数字で入力してください。";
+  const isActive = !formState.isDirty || !formState.isValid ? "inactive" : ""
 
   return (
     <div>
@@ -99,7 +100,9 @@ export default function Form() {
                 </div>
               </div>
               <div className="panel-footer">
-                <input type="submit" name="submitConfirm" value="計算する" />
+                <button type="submit" name="submitConfirm" disabled={!formState.isDirty || !formState.isValid} className={isActive}>
+                  計算する
+                </button>
               </div>
             </form>
           </div>
