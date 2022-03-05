@@ -55,7 +55,7 @@ https://triangle-demo-c574e.web.app/
   
 テストケース作成後、以下コマンドでファイルをpushしてPRを作成してください。
   
-$ git add .  
-$ git commit -m "自分で考えたコミットメッセージ"
-$ git push -u
+`$ git add .`  
+`$ git commit -m "自分で考えたコミットメッセージ"`  
+`$ git push -u`
 
