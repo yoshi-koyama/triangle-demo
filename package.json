@@ -4,7 +4,7 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
-    "@hookform/error-message": "0.0.5",
+    "@hookform/error-message": "2.0.0",
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "9.5.0",
     "@testing-library/user-event": "13.5.0",
