@@ -5,11 +5,12 @@
 
 # ローカル環境構築
 
-1. git clone このプロジェクトのクローンURL
-2. cd triangle-demo
-3. docker-compose up
-4. ブラウザから`http://localhost:3000/`にアクセスする  
-※docker-compose upから立ち上がるまでに1分程度待たないといけないです
+`$ git clone このプロジェクトのクローンURL`  
+`$ cd triangle-demo`  
+`$ docker-compose up`  
+
+ブラウザから`http://localhost:3000/`にアクセスする  
+※docker-compose upから立ち上がるまでに1分程度待たないといけないです  
 
 # Webからアクセス
 このアプリケーションはFirebase Hostingを利用してWeb上に公開しています。
