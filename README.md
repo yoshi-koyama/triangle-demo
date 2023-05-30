@@ -40,21 +40,3 @@ https://triangle-demo-c574e.web.app/
 
 対応ブラウザは最新版のChromeです。  
 
-# 課題
-
-以下コマンドのとおりにブランチを作成し、テストケースを作成してください。  
-
-`$ git branch feature/<your-name>`  
-<your-name>は自身の名前のアルファベットに置き換えてください。  
-
-`$ git checkout feature/<your-name>`  
-
-`test`ディレクトリ配下に`<your-name>-testcase.md`ファイルを作成する。  
-  
-`test`ディレクトリの`koyama-testcase.md`を参考にテストケースを作成してください。  
-  
-テストケース作成後、以下コマンドでファイルをpushしてPRを作成してください。  
-  
-`$ git add .`  
-`$ git commit -m "自分で考えたコミットメッセージ"`  
-`$ git push -u`  
